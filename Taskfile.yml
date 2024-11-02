@@ -1,0 +1,18 @@
+version: '3'
+
+tasks:
+  default:
+    aliases: ["build"]
+    cmds:
+      - go build -o build/server.exe cmd/server/main.go
+      - ./build/server.exe
+  test:
+    cmds:
+      - echo "Testing..."
+  deploy:
+    cmds:
+      - echo "Deploying..."
+  run:
+    desc: "Run the server"
+    cmds:
+      - go run cmd/server/main.go

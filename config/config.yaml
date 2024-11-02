@@ -1,0 +1,30 @@
+mode: dev
+
+server:
+  port: 8080
+
+# auth
+auth:
+  salt: hashed-password
+
+  jwt:
+    secret: secret-key
+    expiry: 1h
+
+
+# postgresql
+postgres:
+  uri: postgres://postgres:password@localhost:5432/postgres
+
+
+redis:
+  addr: localhost:6379
+  password: # no password
+  db : 0
+
+
+# prometheus
+metrics:
+  enabled: true
+
+# TODO: logging
